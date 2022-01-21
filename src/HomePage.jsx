@@ -1,25 +1,9 @@
 import { Link } from 'react-router-dom';
 
-import styled from '@emotion/styled';
+import List from './css/List';
+import Item from './css/Item';
 
 import Title from './css/Title';
-
-const List = styled.ul({
-  display: 'flex',
-  listStyle: 'none',
-});
-
-const Item = styled.li({
-  padding: '10px 16px',
-  '& a': {
-    textDecoration: 'none',
-    color: 'black',
-    ':hover': {
-      textDecorationLine: 'underline',
-      cursor: 'pointer',
-    },
-  },
-});
 
 export default function HomePage() {
   return (

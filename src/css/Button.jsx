@@ -1,9 +1,8 @@
 import styled from '@emotion/styled';
 
 const Button = styled.button({
-  margin: '0 16px',
   padding: '5px 10px',
-  borderRadius: '10px',
+  borderRadius: '4px',
   border: '1px solid black',
   ':hover': {
     backgroundColor: 'gray',

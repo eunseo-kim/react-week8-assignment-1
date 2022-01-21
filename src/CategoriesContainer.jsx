@@ -5,6 +5,10 @@ import {
   loadRestaurants,
 } from './actions';
 
+import List from './css/List';
+import Item from './css/Item';
+import Button from './css/Button';
+
 import { get } from './utils';
 
 export default function CategoriesContainer() {
@@ -19,10 +23,10 @@ export default function CategoriesContainer() {
   }
 
   return (
-    <ul>
+    <List>
       {categories.map((category) => (
-        <li key={category.id}>
-          <button
+        <Item key={category.id}>
+          <Button
             type="button"
             onClick={() => handleClick(category.id)}
           >
@@ -32,9 +36,9 @@ export default function CategoriesContainer() {
                 {category.id === selectedCategory.id ? '(V)' : null}
               </>
             ) : null}
-          </button>
-        </li>
+          </Button>
+        </Item>
       ))}
-    </ul>
+    </List>
   );
 }

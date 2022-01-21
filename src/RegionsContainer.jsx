@@ -5,6 +5,10 @@ import {
   loadRestaurants,
 } from './actions';
 
+import List from './css/List';
+import Item from './css/Item';
+import Button from './css/Button';
+
 import { get } from './utils';
 
 export default function RegionsContainer() {
@@ -19,10 +23,10 @@ export default function RegionsContainer() {
   }
 
   return (
-    <ul>
+    <List>
       {regions.map((region) => (
-        <li key={region.id}>
-          <button
+        <Item key={region.id}>
+          <Button
             type="button"
             onClick={() => handleClick(region.id)}
           >
@@ -32,9 +36,9 @@ export default function RegionsContainer() {
                 {region.id === selectedRegion.id ? '(V)' : null}
               </>
             ) : null}
-          </button>
-        </li>
+          </Button>
+        </Item>
       ))}
-    </ul>
+    </List>
   );
 }
