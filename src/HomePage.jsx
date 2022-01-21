@@ -5,20 +5,19 @@ import styled from '@emotion/styled';
 import Title from './css/Title';
 
 const List = styled.ul({
+  display: 'flex',
   listStyle: 'none',
-  backgroundColor: 'gray',
 });
 
 const Item = styled.li({
   padding: '10px 16px',
-  borderBottom: '1px solid lightgray',
   '& a': {
     textDecoration: 'none',
-    color: 'white',
-  },
-  ':hover': {
-    backgroundColor: 'lightgray',
-    cursor: 'pointer',
+    color: 'black',
+    ':hover': {
+      textDecorationLine: 'underline',
+      cursor: 'pointer',
+    },
   },
 });
 

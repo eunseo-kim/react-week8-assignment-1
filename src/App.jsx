@@ -20,9 +20,8 @@ import { setAccessToken } from './actions';
 import { loadItem } from './services/storage';
 
 const Header = style.header({
-  margin: '0 auto',
-  padding: '16px',
-  borderBottom: '1px solid #CCC',
+  margin: '16px auto',
+  borderBottom: '1px solid lightgray',
   '& h1': {
     color: 'darkgray',
   },

@@ -1,5 +1,15 @@
 import { memo } from 'react';
 
+import styled from '@emotion/styled';
+import Button from './css/Button';
+
+const InputField = styled.div({
+  padding: '5px 16px',
+  '& label': {
+    marginRight: '5px',
+  },
+});
+
 const LoginForm = memo(({ fields, onChange, onSubmit }) => {
   const { email, password } = fields;
 
@@ -10,7 +20,7 @@ const LoginForm = memo(({ fields, onChange, onSubmit }) => {
 
   return (
     <>
-      <div>
+      <InputField>
         <label htmlFor="login-email">
           E-mail
         </label>
@@ -21,8 +31,8 @@ const LoginForm = memo(({ fields, onChange, onSubmit }) => {
           value={email}
           onChange={handleChange}
         />
-      </div>
-      <div>
+      </InputField>
+      <InputField>
         <label htmlFor="login-password">
           Password
         </label>
@@ -33,13 +43,13 @@ const LoginForm = memo(({ fields, onChange, onSubmit }) => {
           value={password}
           onChange={handleChange}
         />
-      </div>
-      <button
+      </InputField>
+      <Button
         type="button"
         onClick={onSubmit}
       >
         Log In
-      </button>
+      </Button>
     </>
   );
 });
