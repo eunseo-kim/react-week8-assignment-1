@@ -6,6 +6,8 @@ import {
 
 import { useDispatch } from 'react-redux';
 
+import style from '@emotion/styled';
+
 import HomePage from './HomePage';
 import AboutPage from './AboutPage';
 import LoginPage from './LoginPage';
@@ -17,6 +19,19 @@ import { setAccessToken } from './actions';
 
 import { loadItem } from './services/storage';
 
+const Header = style.header({
+  margin: '0 auto',
+  padding: '16px',
+  borderBottom: '1px solid #CCC',
+  '& h1': {
+    color: 'darkgray',
+  },
+  '& a': {
+    textDecoration: 'none',
+    color: 'black',
+  },
+});
+
 export default function App() {
   const dispatch = useDispatch();
 
@@ -27,11 +42,11 @@ export default function App() {
 
   return (
     <div>
-      <header>
+      <Header>
         <h1>
-          <Link to="/">헤더 영역</Link>
+          <Link to="/">Eat Go</Link>
         </h1>
-      </header>
+      </Header>
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/about" component={AboutPage} />
